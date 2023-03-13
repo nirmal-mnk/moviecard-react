@@ -1,0 +1,107 @@
+#root {
+  position: relative;
+  background-color: #000;
+}
+.layout-main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--bg-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.layout-main:before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.movie-card {
+  width: 50%;
+  height: 450px;
+  z-index: 2;
+  background-color: var(--txt-white);
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-inner .card-image {
+  width: 40%;
+  height: 100%;
+}
+.card-inner .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 12px 12px 0;
+}
+.card-inner .card-content {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.card-content::after {
+  content: "";
+  width: 220px;
+  height: 100%;
+  /* background: linear-gradient(to right, #2882d4 15%, transparent); */
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.card-inner .card-content .card-content-sub {
+  padding: 2rem;
+}
+.card-inner .card-content .card-content-sub h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 56px;
+  letter-spacing: 4px;
+}
+.card-inner .card-content .card-content-sub p {
+  margin-bottom: 8px;
+}
+.card-inner .card-content .card-content-sub .plot {
+  margin: 30px 0 8px 0;
+}
+.card-inner .card-content .card-content-sub .highlight {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin: 0 10px 0 0;
+  padding: 4px;
+}
+.searchbox {
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.searchbox input {
+  width: 47%;
+  background: none;
+  border: 1px solid #3d3d3d;
+  padding: 10px;
+  outline: none;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
