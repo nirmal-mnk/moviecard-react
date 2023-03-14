@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/moviecard-react/static/css/main.d74f9982.css",
-    "main.js": "/moviecard-react/static/js/main.96fad841.js",
+    "main.js": "/moviecard-react/static/js/main.fdd9b6ed.js",
     "static/js/787.1cda3206.chunk.js": "/moviecard-react/static/js/787.1cda3206.chunk.js",
     "static/media/logo.svg": "/moviecard-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/moviecard-react/index.html",
     "main.d74f9982.css.map": "/moviecard-react/static/css/main.d74f9982.css.map",
-    "main.96fad841.js.map": "/moviecard-react/static/js/main.96fad841.js.map",
+    "main.fdd9b6ed.js.map": "/moviecard-react/static/js/main.fdd9b6ed.js.map",
     "787.1cda3206.chunk.js.map": "/moviecard-react/static/js/787.1cda3206.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d74f9982.css",
-    "static/js/main.96fad841.js"
+    "static/js/main.fdd9b6ed.js"
   ]
 }
