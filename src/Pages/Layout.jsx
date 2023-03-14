@@ -14,7 +14,7 @@ export default function Layout() {
       setIsError(false);
       try {
         const response = await axios.get(
-          `http://www.omdbapi.com/?i=tt3896198&apikey=b674b074&t=${movie}`
+          `https://www.omdbapi.com/?i=tt3896198&apikey=b674b074&t=${movie}`
         );
         if (
           response.data.Response === "True" &&
