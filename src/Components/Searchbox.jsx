@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function SearchBox(props) {
   const [searchval, setSearchVal] = useState("vikram");
+  const searchboxRef = useRef(null);
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchVal("");
@@ -16,6 +17,7 @@ export default function SearchBox(props) {
           value={searchval}
           onChange={(e) => setSearchVal(e.target.value)}
           placeholder="Search Movie, Web Series"
+          ref={searchboxRef}
         />
       </form>
     </div>

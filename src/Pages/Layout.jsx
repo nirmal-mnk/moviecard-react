@@ -7,42 +7,50 @@ export default function Layout() {
   const [data, setData] = useState([]);
   const [movie, setMovie] = useState("vikram");
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(null);
+  const [isError, setIsError] = useState(false);
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
+      setIsError(false);
       try {
         const response = await axios.get(
           `http://www.omdbapi.com/?i=tt3896198&apikey=b674b074&t=${movie}`
         );
-        setData(response.data);
-        console.log(response.data);
+        if (
+          response.data.Response === "True" &&
+          response.data.Poster !== "N/A"
+        ) {
+          console.log(response.data);
+          setData(response.data);
+        } else {
+          console.log(response.data);
+
+          setData([]);
+          setIsError(true);
+        }
       } catch (error) {
-        console.log(error);
-        setIsError(error.Response);
-        console.log(isError);
+        setIsError(true);
       }
       setIsLoading(false);
     }
     fetchData();
   }, [movie]);
   const getSearchedVal = (data) => {
-    console.log(data);
     setMovie(data);
   };
 
   let content;
-  console.log(isError);
   if (isError) {
     content = (
       <div className="movie-card">
-        <p>Oops, something went wrong.</p>;
+        <img src={require("../Images/Not_Found.png")} alt="Movie Not Found" />
+        <p className="notfound">Movie Not Found</p>
       </div>
     );
   } else if (isLoading) {
     content = (
       <div className="movie-card">
-        <p>Loading...</p>;
+        <p>Loading...</p>
       </div>
     );
   } else {
